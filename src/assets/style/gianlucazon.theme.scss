@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$gianlucazon-primary: mat-palette($mat-indigo);
+$gianlucazon-accent:  mat-palette($mat-pink, A200, A100, A400);
+$gianlucazon-warn:    mat-palette($mat-red);
+
+$gianlucazon-theme: mat-light-theme((
+  color: (
+    primary: $gianlucazon-primary,
+    accent: $gianlucazon-accent,
+    warn: $gianlucazon-warn,
+  )
+));
+
+@include angular-material-theme($gianlucazon-theme);
+
+$gianlucazon-dark-primary: mat-palette($mat-indigo);
+$gianlucazon-dark-accent:  mat-palette($mat-pink, A200, A100, A400);
+$gianlucazon-dark-warn:    mat-palette($mat-red);
+
+$gianlucazon-dark-theme: mat-dark-theme((
+  color: (
+    primary: $gianlucazon-dark-primary,
+    accent: $gianlucazon-dark-accent,
+    warn: $gianlucazon-dark-warn,
+  )
+));
+
+.gianlucazon-dark {
+  @include angular-material-color($gianlucazon-dark-theme);
+}
+
